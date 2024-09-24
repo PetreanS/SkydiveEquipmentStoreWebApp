@@ -1,0 +1,35 @@
+<body>
+  <br />
+
+  <div *ngIf="logInMessage" class="error-message-box">
+    <div class="message-box">
+      {{ logInMessage }}
+    </div>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+    <div>
+      <label for="email" class="input-header">Email:</label>
+      <input type="email" id="email" formControlName="email" />
+    </div>
+    <div>
+      <label for="password" class="input-header">Password:</label>
+      <div class="password-input">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          id="password"
+          formControlName="password"
+        />
+        <i class="toggle-icon" (click)="togglePasswordVisibility()">
+          <mat-icon style="height: 19px">remove_red_eye</mat-icon>
+        </i>
+      </div>
+    </div>
+
+    <button type="submit" class="login">Log In</button>
+
+    <span class="registerSpan">Don't have an account? <a routerLink="/register" class="register-link">Register here</a></span>
+  </form>
+  <br />
+  <app-footer></app-footer>
+</body>

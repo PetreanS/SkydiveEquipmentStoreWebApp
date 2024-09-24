@@ -1,0 +1,112 @@
+.finish-order-container {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 800px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.finish-order-header {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #c22c33;
+  text-align: center;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.order-summary {
+  margin-top: 30px;
+}
+
+.order-summary h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.order-item-details {
+  flex-grow: 1;
+}
+
+.order-item-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.order-item-price {
+  font-size: 16px;
+  color: #888;
+}
+
+.submit-order-button {
+  margin-top: 20px;
+  background-color: #c22c33;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-order-button:hover {
+  background-color: #a61c22;
+}
+
+.total-price {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.total-price p {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}

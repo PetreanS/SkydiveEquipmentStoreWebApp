@@ -1,0 +1,38 @@
+<div class="modal-container">
+  <div class="photo-section">
+    <div class="frame">
+      <div class="photo-frame">
+        <img [src]="product.imageUrl" alt="Product Image" />
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <label class="name-label">{{ product.name }}</label>
+    <label class="price-label">{{ product.price | currency }}</label>
+    <label class="description-label">
+      <b>About this item:</b> {{ product.description }}
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type
+      specimen book. It has survived not only five centuries, but also the leap into
+      electronic
+    </label>
+    <div class="size-selection">
+      <label class="size-label">Available sizes:</label>
+      <div class="size-options">
+        <div
+          *ngFor="let size of product.sizes"
+          [ngClass]="{
+            'size-box': true,
+            selected: selectedSize === size.value
+          }"
+          (click)="selectSize(size.value)"
+        >
+          {{ size.value }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="cancel-button" (click)="cancel()">Cancel</button>
+  <button class="add-to-cart-button" (click)="addToCart()">Add to Cart</button>
+</div>

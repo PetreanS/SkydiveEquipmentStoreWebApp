@@ -1,0 +1,9 @@
+.footer-main-div {
+    height: 55px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Montserrat;
+}

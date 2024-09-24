@@ -1,0 +1,29 @@
+<div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Order History</h5>
+          <button type="button" class="close-btn" aria-label="Close" (click)="close()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="order-list" *ngIf="orders.length > 0; else noOrders">
+            <div class="order-card" *ngFor="let order of orders">
+              <img src="{{ order.productImageUrl }}" alt="{{ order.productName }}" class="product-image">
+              <div class="order-details">
+                <h5 class="product-name">{{ order.productName }}</h5>
+                <p><strong>Description:</strong> {{ order.productDescription }}</p>
+                <p><strong>Category:</strong> {{order.productCategory.charAt(0).toUpperCase()+ order.productCategory.slice(1) }}</p>
+                <p><strong>Price:</strong> ${{ order.productPrice }}</p>
+                <p><strong>Size:</strong> {{ order.productSize }}</p>
+                <p *ngIf="order.productColor !== ''"><strong>Color:</strong> {{ order.productColor }}</p>
+              </div>
+            </div>
+          </div>
+          <ng-template #noOrders>
+            <p class="text-center">No orders found.</p>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  

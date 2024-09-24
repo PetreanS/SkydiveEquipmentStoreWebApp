@@ -1,0 +1,110 @@
+<body>
+  <div class="content-container">
+    <div class="content-header">
+      <div class="content-text">
+        <h1 style="font-weight: 200; margin: 0">JERSEY</h1>
+      </div>
+    </div>
+    <div class="content2-header">
+      <div class="content2-text">
+        <h2 style="font-weight: 200; line-height: 23px">SKYDIVE JERSEY</h2>
+      </div>
+    </div>
+    <div class="p-text">
+      <p>
+        Full Printed, Custom Designed Premium Jerseys<br />For quotation please
+        contact our office!
+      </p>
+    </div>
+    <div class="photo-container">
+      <img src="assets/photos/bb1.png" alt="Photo" class="photo" />
+    </div>
+    <div class="content2-header">
+      <div class="content2-list">
+        <h2 style="font-weight: 200; line-height: 23px">
+          <ul class="price-ul">
+            <li>PIECES</li>
+            <li>LONG</li>
+            <li>SHORT</li>
+          </ul>
+        </h2>
+      </div>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 24px">10</li>
+        <li>€42 / PC</li>
+        <li style="padding-left: 0px">€40 / PC</li>
+      </ul>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 7px">11-25</li>
+        <li>€38 / PC</li>
+        <li style="padding-left: 0px">€36 / PC</li>
+      </ul>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 0px">26-50</li>
+        <li>€33 / PC</li>
+        <li style="padding-left: 0px">€31 / PC</li>
+      </ul>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 4px">51-75</li>
+        <li>€30 / PC</li>
+        <li style="padding-left: 0px">€28 / PC</li>
+      </ul>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 0px">75-100</li>
+        <li style="padding-left: 5px">€28 / PC</li>
+        <li style="padding-left: 0px">€26 / PC</li>
+      </ul>
+    </div>
+    <div class="content3-header">
+      <div class="content3-text">
+        <h2 style="font-weight: 200; line-height: 23px">ABOUT THE JERSEY</h2>
+      </div>
+    </div>
+    <div class="p-text">
+      <p>
+        A skydiving jersey is specially designed attire crafted from <br />
+        lightweight, breathable materials such as spandex or <br />
+        polyester blends.Engineered to withstand the rigors of <br />
+        high-altitude activities like skydiving, these jerseys offer <br />
+        unparalleled flexibility and comfort, allowing skydivers to <br />
+        move freely through the air.
+      </p>
+    </div>
+    <div class="content-header">
+      <div class="content-text">
+        <h2 style="font-weight: 200; margin: 0">HOW TO MEASURE</h2>
+      </div>
+    </div>
+    <div class="measure-container">
+      <img src="assets/photos/jersey-measurement.png" alt="Photo" />
+    </div>
+    <div class="content-header">
+      <div class="content-text">
+        <h2 style="font-weight: 200; margin: 0">JERSEYS IN WEBSHOP</h2>
+      </div>
+    </div>
+    <div class="product-details">
+      <div *ngFor="let product of jerseyProducts" class="product-card" >
+        <div class="edit-container" *ngIf="user && user.roleId === 2">
+          <button class="edit-button" (click)="editRecord(product)">&#9998;</button>
+        </div>
+        <img
+          [src]="product.imageUrl"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+        <button class="buy-now-button" (click)="viewJersey(product)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</body>

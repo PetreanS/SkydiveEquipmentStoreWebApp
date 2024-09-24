@@ -1,0 +1,90 @@
+<body>
+  <div class="content-container">
+    <div class="content-header">
+      <div class="content-text">
+        <h1 style="font-weight: 200; margin: 0">HELMET</h1>
+      </div>
+    </div>
+    <div class="content2-header">
+      <div class="content2-text">
+        <h2 style="font-weight: 200; line-height: 23px">SAFETY FIRST</h2>
+      </div>
+    </div>
+    <div class="p-text">
+      <p>
+        A skydiving helmet cookie is a delightful treat that also pays <br />
+        homage to the essential safety gear used in the sport. Perfect <br />
+        for themed parties or special treats, it combines the thrill of <br />
+        skydiving with a nod to the critical safety features that keep <br />
+        adventurers secure. This cookie is a tasty reminder of the <br />
+        importance of safety in every exhilarating jump.
+      </p>
+    </div>
+    <div class="photo-container">
+      <img src="assets/photos/helmetUI.png" alt="Photo" class="photo" />
+    </div>
+    <div class="content2-header">
+      <div class="content2-list">
+        <h2 style="font-weight: 200; line-height: 23px">
+          <ul class="price-ul">
+            <li>MODEL</li>
+            <li>PRICE</li>
+          </ul>
+        </h2>
+      </div>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 112px">Cookie G3</li>
+        <li>€350</li>
+      </ul>
+    </div>
+    <div class="prices-container">
+      <ul class="price-ul-details">
+        <li style="padding-right: 112px">Cookie G4</li>
+        <li>€500</li>
+      </ul>
+    </div>
+    <div class="content-header" style="margin-top: 80px">
+      <div class="content-text">
+        <h3 style="font-weight: 200; margin: 0">HOW TO MEASURE</h3>
+      </div>
+    </div>
+    <div class="content-header" style="margin-left: 10%; margin-right: 10%">
+      <div class="content-text">
+        <h3 style="font-weight: 200; margin: 0">COOKIE G3</h3>
+      </div>
+    </div>
+    <div class="measure-container">
+      <img src="assets/photos/g3Size.png" alt="Photo" />
+    </div>
+    <div class="content-header" style="margin-left: 10%; margin-right: 10%">
+      <div class="content-text">
+        <h3 style="font-weight: 200; margin: 0">COOKIE G4</h3>
+      </div>
+    </div>
+    <div class="measure-container">
+      <img src="assets/photos/g4Size.png" alt="Photo" />
+    </div>
+    <div class="content-header">
+      <div class="content-text">
+        <h2 style="font-weight: 200; margin: 0">HELMETS IN WEBSHOP</h2>
+      </div>
+    </div>
+    <div class="product-details">
+      <div *ngFor="let product of helmetProducts" class="product-card">
+        <div class="edit-container"  *ngIf="user && user.roleId === 2">
+          <button class="edit-button" (click)="editRecord(product)" >&#9998;</button>
+        </div>
+        <img
+          [src]="product.imageUrl"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+        <button class="buy-now-button" (click)="viewHelmet(product)">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

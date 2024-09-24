@@ -1,0 +1,29 @@
+<div class="modal-content">
+  <h2>Edit Personal Information</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="editedUser.email" name="email" class="form-control" style="color: gray" readonly>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" [(ngModel)]="editedUser.firstName" name="firstName" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" [(ngModel)]="editedUser.lastName" name="lastName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="date" id="dateOfBirth" [(ngModel)]="formattedDateOfBirth" name="dateOfBirth" class="form-control" style="color: gray" readonly>
+    </div>    
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="number" id="phoneNumber" [(ngModel)]="editedUser.phoneNumber" name="phoneNumber" class="form-control">
+    </div>
+    <div class="button-container">
+      <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "pwxQ0FwKNEfxxGGsLy+pOJGnwhcXmkmraulDwvzqyp0=",
+  "Source": "SkydiveEquipmentStore",
+  "BasePath": "_content/SkydiveEquipmentStore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SkydiveEquipmentStore\\wwwroot",
+      "Source": "SkydiveEquipmentStore",
+      "ContentRoot": "D:\\petrean_stefan\\SkydiveEquipmentStore\\wwwroot\\",
+      "BasePath": "_content/SkydiveEquipmentStore",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

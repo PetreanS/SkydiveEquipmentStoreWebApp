@@ -1,0 +1,141 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .modal-container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .photo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .frame {
+    border: 2px solid #ddd;
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photo-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .info-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-top: 25px;
+  }
+  
+  .name-label {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .price-label {
+    font-size: 24px;
+    color: #c22c33;
+  }
+  
+  .description-label {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  .size-selection {
+    margin-top: 20px;
+  }
+  
+  .size-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .size-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .size-box {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .size-box:hover {
+    border-color: #c22c33;
+  }
+  
+  .size-box.selected {
+    border-color: #c22c33;
+    background-color: #f5f5f5;
+  }
+  
+  .cancel-button,
+  .add-to-cart-button {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button {
+    right: 140px;
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #ccc;
+  }
+  
+  .add-to-cart-button {
+    right: 20px;
+    background-color: #c22c33;
+    color: #fff;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #a81f28;
+  }
+  

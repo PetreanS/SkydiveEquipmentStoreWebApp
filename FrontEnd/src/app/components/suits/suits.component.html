@@ -1,0 +1,45 @@
+<body>
+  <div class="content-container">
+    <div class="content-header">
+      <div class="content-text">
+        <h1 style="font-weight: 200; margin: 0">WINGSUIT</h1>
+      </div>
+    </div>
+    <div class="content2-header">
+      <div class="content2-text">
+        <h2 style="font-weight: 200; line-height: 23px">
+          PASSION BEING EVERYTHING
+        </h2>
+      </div>
+    </div>
+    <div class="p-text">
+      <p>
+        Wingsuit flying: where human ambition meets the <br />
+        boundless sky. Picture yourself, soaring like a bird,<br />
+        propelled by nothing but the wind and your own courage. <br />
+        With each jump, you defy gravity and embrace the thrill <br />
+        of true freedom. It's not just a sport; it's a daring <br />
+        declaration of human potential—a leap into the unknown, <br />
+        where every flight is a dance with destiny.
+      </p>
+    </div>
+    <div class="photo-container">
+      <img src="assets/photos/winsuitVEC.png" alt="Photo" class="photo" />
+    </div>
+    <div class="content-header" style="margin-top:35px">
+      <div class="content-text">
+        <h2 style="font-weight: 200; margin: 0">WINGSUITS IN WEBSHOP</h2>
+      </div>
+    </div>
+    <div class="product-details">
+      <div *ngFor="let product of suitProducts" class="product-card">
+        <div class="edit-container" *ngIf="user && user.roleId === 2">
+          <button class="edit-button" (click)="editRecord(product)">&#9998;</button>
+        </div>        
+        <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image" />
+        <button class="buy-now-button" (click)="viewSuit(product)">Buy Now</button>
+      </div>      
+    </div>
+  </div>
+  <app-footer></app-footer>
+</body>

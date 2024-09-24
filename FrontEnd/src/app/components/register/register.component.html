@@ -1,0 +1,72 @@
+<body>
+  <br />
+
+  <div class="error-message-box">
+    <div *ngIf="registrationMessage" class="message-box">
+      {{ registrationMessage }}
+    </div>
+  </div>
+
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div>
+      <label for="email" class="input-header">Email:</label>
+      <input type="email" id="email" formControlName="email" />
+    </div>
+
+    <div>
+      <label for="firstName" class="input-header">First Name:</label>
+      <input type="text" id="firstName" formControlName="firstName" />
+    </div>
+
+    <div>
+      <label for="lastName" class="input-header">Last Name:</label>
+      <input type="text" id="lastName" formControlName="lastName" />
+    </div>
+
+    <div>
+      <label for="phoneNumber" class="input-header">Phone Number:</label>
+      <input type="number" id="phoneNumber" formControlName="phoneNumber" />
+    </div>
+
+    <div>
+      <label for="dateOfBirth" class="input-header">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" formControlName="dateOfBirth" />
+    </div>
+
+    <div>
+      <label for="password" class="input-header">Password:</label>
+      <div class="password-input">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          id="password"
+          formControlName="password"
+        />
+        <i class="toggle-icon" (click)="togglePasswordVisibility()">
+          <mat-icon style="height: 19px">remove_red_eye</mat-icon>
+        </i>
+      </div>
+    </div>
+
+    <div *ngIf="showAdminInput">
+      <label for="adminPassword" class="input-header">Admin Password:</label>
+      <div class="password-input">
+        <input
+          [type]="showAdminPassword ? 'text' : 'password'"
+          id="adminPassword"
+          formControlName="adminPassword"
+        />
+        <i class="toggle-icon" (click)="toggleAdminPasswordVisibility()">
+          <mat-icon style="height: 19px">remove_red_eye</mat-icon>
+        </i>
+      </div>
+    </div>
+
+    <button type="submit" class="register">Register</button>
+
+    <button type="button" class="registerAdmin" (click)="toggleAdminInput()">
+      Register as Admin
+    </button>
+  </form>
+  <br />
+  <app-footer></app-footer>
+</body>

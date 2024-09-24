@@ -1,0 +1,63 @@
+<body>
+  <div *ngIf="user" class="profile-container">
+    <div class="profile-content">
+      <div class="photo-section">
+        <div class="photo-container">
+          <div class="photo-frame" (click)="openFileInput()">
+            <input
+              type="file"
+              (change)="onFileSelected($event)"
+              accept="image/*"
+              id="fileInput"
+              style="display: none"
+            />
+            <img
+              *ngIf="selectedFileUrl"
+              [src]="selectedFileUrl"
+              alt="Selected Image"
+              class="photo-preview"
+            />
+            <div class="edit-emoji">&#9998;</div>
+          </div>
+        </div>
+      </div>
+      <div class="user-info-section">
+        <h2>User Information</h2>
+        <div class="dropdown" *ngIf="user.roleId === 2"></div>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>First Name:</strong> {{ user.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+        <p><strong>Phone Number:</strong> +{{ user.phoneNumber }}</p>
+        <p>
+          <strong>Date Of Birth:</strong>
+          {{ formatDateOfBirth(user.dateOfBirth) }}
+        </p>
+        <div class="dropdown" *ngIf="user.roleId === 2">
+          <button class="add-product-button" (click)="toggleDropdown()">
+            Add Product &#9660;
+          </button>
+          <div class="dropdown-content" *ngIf="isDropdownOpen">
+            <div class="button-container">
+              <button class="products-button" (click)="addSuitOption()">
+                Suit
+              </button>
+              <button class="products-button" (click)="addJerseyOption()">
+                Jersey
+              </button>
+              <button class="products-button" (click)="addHelmetOption()">
+                Helmet
+              </button>
+            </div>
+          </div>
+        </div>
+        <button (click)="openOrderHistory()" class="order-history-details-button">
+          Orders History
+        </button>
+        <button (click)="editDetails()" class="edit-details-button">
+          Edit Personal Informations
+        </button>
+        <button (click)="logOut()" class="logout-button">Logout</button>
+      </div>
+    </div>
+  </div>
+</body>

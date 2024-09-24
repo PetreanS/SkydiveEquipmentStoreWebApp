@@ -1,0 +1,186 @@
+.modal-container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+.frame {
+    border: 2px solid black;
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin: 20px 10px 10px 10px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-photo-label label {
+    padding-left: 13px;
+}
+
+.save-button {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background-color: #c22c33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 17px;
+    box-sizing: border-box;
+}
+
+.delete-button {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background-color: #c22c33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 17px;
+    box-sizing: border-box;
+}
+
+
+.cancel-button {
+    position: absolute;
+    bottom: 6px;
+    right: 77px;
+    background-color: #ccc; 
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px 17px;
+    box-sizing: border-box;
+}
+
+.frame img {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    object-fit: cover;
+    padding: 10px;
+}
+
+.photo-section {
+    float: left;
+}
+
+.info-section {
+    padding-top: 33px;
+}
+
+.product-name-input,
+.price-input,
+.description-input {
+    display: block;
+    margin-bottom: 20px;
+    width: 375px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: math;
+}
+
+.product-name-input::placeholder,
+.price-input::placeholder,
+.description-input::placeholder {
+    color: #aaa;
+}
+
+.color-selection {
+    margin-top: 20px;
+}
+
+.color-label {
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-circle.selected::before {
+    content: '✔';
+    font-size: 16px;
+    color: lightgreen;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-circle.white {
+    border: 1px solid #000;
+}
+
+.size-selection {
+    margin-top: 20px;
+}
+
+.size-label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.size-options div {
+    display: flex;
+    align-items: center;
+}
+
+.size-options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.size-options label {
+    font-size: 18px; 
+}
+
+.description-section{
+    padding-top: 20px;
+}
+
+.input-label { 
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-label {
+    display: flex;
+    text-align: center;
+    flex-flow: column;
+    margin-top: 10px;
+    margin-bottom: -13px;
+    font-family: math;
+    font-size: 22px;
+}

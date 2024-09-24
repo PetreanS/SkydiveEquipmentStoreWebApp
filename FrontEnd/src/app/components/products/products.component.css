@@ -1,0 +1,39 @@
+body {
+    background-image: url("src/assets/photos/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+  }
+  
+  .content-text {
+    margin-left: 20px;
+    font-family: Montserrat;
+    font-size: 10px;
+  }
+  
+  .content-header {
+    color: white;
+    background-color: #c22c33;
+    margin-top: 25px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content2-header {
+    color: white;
+    background-color: #c22c33;
+    margin-top: 25px;
+    height: 20px;
+    margin-right: 500px;
+  }
+  
+  .content-container {
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }

@@ -1,0 +1,63 @@
+<div class="navbar">
+  <div class="logo-container">
+    <a routerLink="">
+      <img src="assets/photos/page-logo.png" alt="Page Logo" class="nav-logo" />
+    </a>
+  </div>
+  <nav class="navbar-menu">
+    <ul class="horizontal-list">
+      <li>
+        <a routerLink="/suits" class="nav-item">
+          <img src="assets/photos/suit.png" alt="Suit" class="nav-icons" />
+          Suits
+        </a>
+      </li>
+      <li>
+        <a routerLink="/jersey" class="nav-item">
+          <img src="assets/photos/shirt.png" alt="Shirt" class="nav-icons" />
+          Jerseys
+        </a>
+      </li>
+      <li>
+        <a routerLink="/helmets" class="nav-item">
+          <img src="assets/photos/helmet.png" alt="Helmet" class="nav-icons" />
+          Helmets
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact" class="nav-item">
+          <img
+            src="assets/photos/contact.png"
+            alt="Contact"
+            class="nav-icons"
+          />
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="profile-cart-container">
+    <div class="nav-buttons" *ngIf="!showAuth">
+      <a routerLink="/profile" class="nav-button">Profile</a>
+    </div>
+    <div class="nav-buttons" *ngIf="showAuth">
+      <a routerLink="/login" class="nav-button">Log in</a>
+    </div>
+    <div class="nav-buttons" *ngIf="showAuth">
+      <a routerLink="/register" class="nav-button">Register</a>
+    </div>
+    <div class="nav-buttons">
+      <a routerLink="/cart" class="nav-item">
+        <img
+          src="assets/photos/cart.png"
+          alt="Cart"
+          class="nav-icons"
+          style="margin-bottom: 4px; height: 24px;"
+        />
+        Cart
+      </a>
+    </div>
+  </div>
+
+</div>
